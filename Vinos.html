@@ -1,0 +1,53 @@
+<html>
+<head><title> Obligatorio 1 </title>
+	<link type="text/css" rel="StyleSheet" href="estilos.css">
+	<script type="text/javascript"src="dominio/bodegadevinos.js"></script>
+</head>
+
+<body>
+<center>
+<form id="castillo">	
+	<table border="2" bgColor="board">
+		<tr><td colspan="2"><h2> Vinos </h2></td></tr>
+
+
+<!-- Entrada de datos -->
+		<tr><td> Id:     </td><td>  <input type="text" id="id"
+										autofocus onkeypress="return isNumberKey(event)"></td></tr>
+		<tr><td> Cepa:   </td><td>  <input type="text" id="cepa"></td></tr>
+		<tr><td> Bodega: </td><td>  <input type="text" id="bodega"></td></tr>
+		<tr><td> Stock:  </td><td>  <input type="text" id="stock"
+										autofocus onkeypress="return isNumberKey(event)"></td></tr>
+		<tr><td> Precio: </td><td>  <input type="text" id="precio"
+										autofocus onkeypress="return isNumberKey(event)"></td></tr>
+	<!-- botones para gestionar el ABM -->	
+	<tr><td colspan="2" style="text-align: center">
+			<input type="button" value="Alta"      id="botonAlta"      onclick="alta();"/>
+			<input type="button" value="Baja"      id="botonBaja" 	   onclick="baja();"/>
+			<input type="button" value="Modificar" id="botonModificar" onclick="modificar();"/>
+			<input type="reset" value="Limpiar"/>
+			<input type="submit" value="Salir" onclick="window.close();"/>	
+		</td></tr>
+	
+		
+	<!-- Cuadro donde se ven los vinos ingresado-->
+	<tr><td colspan="2"><h4> Base de datos </h4></td></tr>
+	
+	<tr><td colspan="2"><select id="lista" size="8" style="width:100%" onclick="seleccionar();"/> </td></tr>
+	
+	<tr><td colspan="2">Consultas</td></tr>
+	<!-- botones ABM de consultas-->
+	<tr><td colspan="2" > 
+	<input type="button" value="Más barato" onclick="vinoBarato();"/>
+	<input type="button" value="Más Caro"  onclick="vinoCaro();"/>
+	<input type="button" value="Consulta de stock" onclick="constock();"/>
+	</td></tr>
+	
+</table>
+
+
+</form>
+
+</center>
+</body>
+</html>
